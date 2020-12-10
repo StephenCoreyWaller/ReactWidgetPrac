@@ -26,7 +26,7 @@ const List = () => {
 	}, [term]);
 
 	return (
-		<div>
+		<div style={{ padding: '40px' }}>
 			<div className='ui form'>
 				<div className='field'>
 					<label htmlFor=''>Enter Search Term</label>

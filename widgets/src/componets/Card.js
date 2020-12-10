@@ -1,9 +1,11 @@
-import { useState } from 'react';
-
 const Card = ({ result }) => {
 	const cards = result.map((item) => {
 		return (
-			<div key={item.pageid} className='row'>
+			<div
+				key={item.pageid}
+				style={{ borderBottom: '1px solid #DCDCDC' }}
+				className='row'
+			>
 				<div className='thirteen wide column'>
 					<h3 className='header'>{item.title}</h3>
 					<span dangerouslySetInnerHTML={{ __html: item.snippet }}></span>

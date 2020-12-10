@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import DropDown from './componets/DropDown';
 // import Accordion from './componets/Accordion';
-import List from './componets/List';
+// import List from './componets/List';
 
 // const items = [
 // 	{ title: 'what is react', content: 'react is a javascript library' },
@@ -10,12 +11,19 @@ import List from './componets/List';
 // 		content: 'about 7 years from facebook',
 // 	},
 // ];
+const Colors = [
+	{ label: 'The Color Red', value: 'red' },
+	{ label: 'The Color Blue', value: 'blue' },
+	{ label: 'The Color Green', value: 'green' },
+];
 
 export default () => {
+	const [toggleDropDown, setDropDown] = useState(false);
 	return (
 		//
 		<div>
-			<List />
+			<button onClick={() => setDropDown(!toggleDropDown)}>Dropdown</button>
+			{toggleDropDown && <DropDown DropName={'Colors'} options={Colors} />}
 		</div>
 	);
 };
